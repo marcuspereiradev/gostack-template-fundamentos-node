@@ -21,8 +21,12 @@ class TransactionsRepository {
     // TODO
   }
 
-  public create(): Transaction {
-    // TODO
+  public create({ title, type, value }): Transaction {
+    const transaction = new Transaction({ title, type, value });
+
+    this.transactions.push(transaction);
+
+    return transaction;
   }
 }
 
