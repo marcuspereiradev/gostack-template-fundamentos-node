@@ -3,7 +3,7 @@ import Transaction from '../models/Transaction';
 
 interface Request {
   title: string;
-  type: string;
+  type: 'income' | 'outcome';
   value: number;
 }
 class CreateTransactionService {
